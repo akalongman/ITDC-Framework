@@ -908,7 +908,7 @@ class CI_Loader {
 				if ( ! file_exists($baseclass))
 				{
 					log_message('error', "Unable to load the requested class: ".$class);
-					p("Unable to load the requested class: ".$class);
+					show_error("Unable to load the requested class: ".$class);
 				}
 
 				// Safety:  Was the class already loaded by a previous call?
@@ -989,7 +989,7 @@ class CI_Loader {
 		if ($is_duplicate == FALSE)
 		{
 			log_message('error', "Unable to load the requested class: ".$class);
-			p("Unable to load the requested class: ".$class);
+			show_error("Unable to load the requested class: ".$class);
 		}
 	}
 
